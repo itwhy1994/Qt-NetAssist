@@ -17,18 +17,28 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="0">
+      <item row="2" column="1">
        <widget class="QPushButton" name="Exit">
         <property name="text">
          <string>Exit</string>
         </property>
        </widget>
       </item>
+      <item row="0" column="2" rowspan="3">
+       <widget class="QTextBrowser" name="DebugInfoBrowser"/>
+      </item>
       <item row="0" column="0">
-       <widget class="QTextBrowser" name="ReceiveDataBrowser"/>
+       <widget class="QLabel" name="targetIP">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
       </item>
       <item row="0" column="1" rowspan="2">
-       <widget class="QTextBrowser" name="DebugInfoBrowser"/>
+       <widget class="QTextBrowser" name="ReceiveDataBrowser"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="lineEdit"/>
       </item>
      </layout>
     </item>

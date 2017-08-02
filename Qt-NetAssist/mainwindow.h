@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <QStatusBar>
 #include <QHostInfo>
+#include <netassist.h>
 
 namespace Ui {
 class MainWindow;

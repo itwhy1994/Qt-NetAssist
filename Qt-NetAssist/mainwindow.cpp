@@ -6,9 +6,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QString machineName = QHostInfo::localHostName();
-    statusBarLabel = new QLabel(machineName);
+    ui->targetIP->setText(tr("目标IP:"));
+    QString machineName = QHostInfo::localHostName();//Computer Name
+    QHostInfo hostInfo = QHostInfo::fromName(machineName);
+    QString IPs;
+    foreach(QHostAddress IP, hostInfo.addresses())
+    {
+        IPs += IP.toIPv4Address();
+    }
+    statusBarLabel = new QLabel(machineName + " " + IPs);
     statusBar()->addPermanentWidget(statusBarLabel);
+
 }
 
 MainWindow::~MainWindow()
