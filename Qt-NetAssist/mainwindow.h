@@ -5,7 +5,7 @@
 #include <QLabel>
 #include <QStatusBar>
 #include <QHostInfo>
-#include <netassist.h>
+#include <udp.h>
 
 namespace Ui {
 class MainWindow;
@@ -20,11 +20,14 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_Exit_clicked();
+    void on_ExitButton_clicked();
+
+    void on_SendDataButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     QLabel *statusBarLabel;
+    udpserver *m_udpserver;
 };
 
 #endif // MAINWINDOW_H

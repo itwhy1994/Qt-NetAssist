@@ -26,9 +26,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    netassist.cpp
+    udp.cpp
 
 HEADERS  += mainwindow.h \
-    netassist.h
+    udp.h
 
 FORMS    += mainwindow.ui

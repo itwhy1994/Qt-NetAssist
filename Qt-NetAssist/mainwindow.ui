@@ -17,28 +17,38 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="1">
-       <widget class="QPushButton" name="Exit">
-        <property name="text">
-         <string>Exit</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2" rowspan="3">
+      <item row="0" column="3" rowspan="15">
        <widget class="QTextBrowser" name="DebugInfoBrowser"/>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="targetIP">
         <property name="text">
-         <string>TextLabel</string>
+         <string>TargetIP</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1" rowspan="2">
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="targetIPlineEdit"/>
+      </item>
+      <item row="0" column="2" rowspan="15">
        <widget class="QTextBrowser" name="ReceiveDataBrowser"/>
       </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="lineEdit"/>
+      <item row="15" column="1">
+       <widget class="QPushButton" name="SendDataButton">
+        <property name="text">
+         <string>SendData</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="2" colspan="2">
+       <widget class="QPushButton" name="ExitButton">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="15">
+       <widget class="QTextEdit" name="SendDataBrowser"/>
       </item>
      </layout>
     </item>
