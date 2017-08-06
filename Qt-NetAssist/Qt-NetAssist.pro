@@ -6,7 +6,7 @@
 
 QT       += core gui
 QT       += network
-
+QT       += widgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Qt-NetAssist
@@ -25,10 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    udp.cpp
+        mainwindow.cpp
 
-HEADERS  += mainwindow.h \
-    udp.h
+HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
