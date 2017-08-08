@@ -76,8 +76,8 @@ void MainWindow::readData()
         QNetworkDatagram datagram = m_udpSocketRead.receiveDatagram();
         QHostAddress senderIP = datagram.senderAddress();
         int senderPort = datagram.senderPort();
-        ui->DebugInfoBrowser->insertPlainText("from:" + senderIP.toString() + ":" + \
-                                             QString::number(senderPort) +"\n");
+        ui->DebugInfoBrowser->insertPlainText("from:" + senderIP.toString() + ":" +
+                                              QString::number(senderPort) +"\n");
         ui->ReceiveDataBrowser->insertPlainText(datagram.data());
     }
 }
