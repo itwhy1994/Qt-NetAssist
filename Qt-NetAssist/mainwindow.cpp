@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     initUI();
-    initUdpSocket();
+    initSocket();
 }
 
 MainWindow::~MainWindow()
@@ -20,6 +20,8 @@ void MainWindow::initUI()
     ui->setupUi(this);
     ui->targetIPlabel->setText(tr("目标IP:"));
     ui->targetPortlabel->setText(tr("目标端口:"));
+    ui->SendDataLabel->setText(tr("发送数据"));
+    ui->ReadDataLabel->setText(tr("接收数据"));
     ui->OpenPortButton->setText(tr("打开端口"));
     ui->SendDataButton->setText(tr("发送数据"));
     ui->clearButton->setText(tr("清空数据"));
@@ -36,12 +38,9 @@ void MainWindow::initUI()
     statusBar()->addPermanentWidget(statusBarLabel);
 }
 
-void MainWindow::initUdpSocket()
+void MainWindow::initSocket()
 {
-    //Send
-
-
-    //Read
+    m_qstrSocketType = ui->ChoosecomboBox->currentText().toLatin1();
     connect(&m_udpSocketRead, SIGNAL(readyRead()), this, SLOT(readData()));
 }
 
@@ -114,4 +113,9 @@ void MainWindow::on_OpenPortButton_clicked()
     {
         ui->DebugInfoBrowser->insertPlainText(tr("Listen Failure\n"));
     }
+}
+
+void MainWindow::on_ChoosecomboBox_currentTextChanged(const QString &arg1)
+{
+    m_qstrSocketType = arg1;
 }

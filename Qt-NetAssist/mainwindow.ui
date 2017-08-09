@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>532</width>
-    <height>482</height>
+    <width>1153</width>
+    <height>708</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,67 +16,130 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="4" rowspan="15">
-       <widget class="QTextBrowser" name="DebugInfoBrowser">
-        <property name="mouseTracking">
-         <bool>false</bool>
-        </property>
-       </widget>
+     <layout class="QHBoxLayout" name="AllhorizontalLayout" stretch="1,2,2,2">
+      <item>
+       <layout class="QVBoxLayout" name="SettingsverticalLayout">
+        <item>
+         <widget class="QComboBox" name="ChoosecomboBox">
+          <item>
+           <property name="text">
+            <string>TCP</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>UDP</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="targetIPlabel">
+          <property name="text">
+           <string>TargetIP</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="targetIPlineEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="targetPortlabel">
+          <property name="text">
+           <string>TargetPort</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="PortlineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="OpenPortButton">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="targetIPlabel">
-        <property name="text">
-         <string>TargetIP</string>
-        </property>
-       </widget>
+      <item>
+       <layout class="QVBoxLayout" name="SendverticalLayout">
+        <item>
+         <widget class="QLabel" name="SendDataLabel">
+          <property name="text">
+           <string>SendData</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="SendDataBrowser"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="SendDataButton">
+          <property name="text">
+           <string>SendData</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="targetIPlineEdit"/>
+      <item>
+       <layout class="QVBoxLayout" name="ReadverticalLayout">
+        <item>
+         <widget class="QLabel" name="ReadDataLabel">
+          <property name="text">
+           <string>ReadData</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="ReceiveDataBrowser"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearButton">
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="0" column="1" rowspan="15" colspan="2">
-       <widget class="QTextEdit" name="SendDataBrowser"/>
-      </item>
-      <item row="0" column="3" rowspan="15">
-       <widget class="QTextBrowser" name="ReceiveDataBrowser"/>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="targetPortlabel">
-        <property name="text">
-         <string>TargetPort</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLineEdit" name="PortlineEdit"/>
-      </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="OpenPortButton">
-        <property name="text">
-         <string>Open</string>
-        </property>
-       </widget>
-      </item>
-      <item row="15" column="4">
-       <widget class="QPushButton" name="ExitButton">
-        <property name="text">
-         <string>Exit</string>
-        </property>
-       </widget>
-      </item>
-      <item row="15" column="3">
-       <widget class="QPushButton" name="clearButton">
-        <property name="text">
-         <string>Clear</string>
-        </property>
-       </widget>
-      </item>
-      <item row="15" column="1" colspan="2">
-       <widget class="QPushButton" name="SendDataButton">
-        <property name="text">
-         <string>SendData</string>
-        </property>
-       </widget>
+      <item>
+       <layout class="QVBoxLayout" name="DebugverticalLayout">
+        <item>
+         <widget class="QTextBrowser" name="DebugInfoBrowser">
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ExitButton">
+          <property name="text">
+           <string>Exit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -87,7 +150,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>532</width>
+     <width>1153</width>
      <height>23</height>
     </rect>
    </property>
